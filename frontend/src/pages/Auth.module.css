@@ -1,0 +1,83 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  font-family: sans-serif;
+}
+
+.authForm {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.authImage {
+  max-width: 150px;
+  margin-bottom: 20px;
+}
+
+.authImage.logo {
+  max-width: 200px;
+}
+
+.authForm h2 {
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.authForm p {
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.authInput {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.authButton {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background-color: #ff3b5f;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.authSwitch {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.authSwitch a {
+  color: #ff3b5f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Style for displaying error messages */
+.error {
+  color: #ff3b5f;
+  background-color: #ffebee;
+  border: 1px solid #ff3b5f;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
