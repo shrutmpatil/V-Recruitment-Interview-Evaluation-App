@@ -123,87 +123,6 @@ function EvaluationForm({ userProfile }) {
         setLoading(false);
     }, [scheduleId]);
 
-    useEffect(() => {
-        fetchSchedule();
-    }, [fetchSchedule]);
-
-    useEffect(() => {
-        if (!isTiming || timer <= 0) {
-            if (timer === 0 && isTiming) {
-                handleSubmit(null, true);
-            }
-            return;
-        }
-
-        const interval = setInterval(() => {
-            setTimer(prev => prev - 1);
-        }, 1000);
-
-        return () => clearInterval(interval);
-    }, [isTiming, timer, handleSubmit]);
-
-
-    const handleScoreChange = (tab, key, value) => {
-        setFormData(prev => ({
-            ...prev,
-            [tab]: {
-                ...(prev[tab] || {}),
-                [key]: value
-            }
-        }));
-    };
-
-    const handleCommentChange = (tab, value) => {
-        setFormData(prev => ({
-            ...prev,
-            [tab]: {
-                ...(prev[tab] || {}),
-                comment: value
-            }
-        }));
-    };
-
-    const formatTime = (seconds) => {
-        const mins = Math.floor(seconds / 60);
-        const secs = seconds % 60;
-        return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-    };
-
-    const handleFinalVerdict = async (e) => {
-        e.preventDefault();
-        setSubmissionStatus({ state: 'submitting', message: "Submitting Final Verdict..." });
-
-        if (!finalVerdict) {
-            setSubmissionStatus({ state: 'error', message: "Please select a final verdict before submitting." });
-            return;
-        }
-
-        try {
-            const { error: updateError } = await supabase
-                .from('candidate_profiles')
-                .update({ final_verdict: finalVerdict })
-                .eq('user_id', schedule.candidate.uid);
-
-            if (updateError) throw updateError;
-
-            const { error: scheduleUpdateError } = await supabase.from('schedules')
-                    .update({ status: 'Completed' })
-                    .eq('id', scheduleId);
-
-            if (scheduleUpdateError) {
-                 console.error("Failed to update schedule status to Completed:", scheduleUpdateError);
-                 setSubmissionStatus({ state: 'warning', message: "Final Verdict submitted. WARNING: Failed to update schedule status." });
-            }
-
-            setSubmissionStatus({ state: 'success', message: "Final Verdict recorded successfully! Redirecting to Home..." });
-
-            setTimeout(() => navigate('/'), 1500);
-
-        } catch (err) {
-            setSubmissionStatus({ state: 'error', message: "Final Verdict submission failed: " + err.message });
-        }
-    };
-
     const handleSubmit = useCallback(async (e, isAutoSubmit = false) => {
         if (e) e.preventDefault();
         setIsTiming(false);
@@ -283,11 +202,95 @@ function EvaluationForm({ userProfile }) {
     }, [formData, navigate, schedule, scheduleId, timer, userProfile]);
 
 
+    useEffect(() => {
+        fetchSchedule();
+    }, [fetchSchedule]);
+
+    useEffect(() => {
+        // FIX: The ReferenceError occurs here because handleSubmit is not fully defined
+        // when React checks the dependency array [isTiming, timer, handleSubmit].
+        // The fix is to remove handleSubmit from the dependency array.
+        
+        if (!isTiming || timer <= 0) {
+            if (timer === 0 && isTiming) {
+                handleSubmit(null, true);
+            }
+            return;
+        }
+
+        const interval = setInterval(() => {
+            setTimer(prev => prev - 1);
+        }, 1000);
+
+        return () => clearInterval(interval);
+    }, [isTiming, timer]); // CORRECTED: Removed handleSubmit from dependencies
+
+
+    const handleScoreChange = (tab, key, value) => {
+        setFormData(prev => ({
+            ...prev,
+            [tab]: {
+                ...(prev[tab] || {}),
+                [key]: value
+            }
+        }));
+    };
+
+    const handleCommentChange = (tab, value) => {
+        setFormData(prev => ({
+            ...prev,
+            [tab]: {
+                ...(prev[tab] || {}),
+                comment: value
+            }
+        }));
+    };
+
+    const formatTime = (seconds) => {
+        const mins = Math.floor(seconds / 60);
+        const secs = seconds % 60;
+        return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+    };
+
+    const handleFinalVerdict = async (e) => {
+        e.preventDefault();
+        setSubmissionStatus({ state: 'submitting', message: "Submitting Final Verdict..." });
+
+        if (!finalVerdict) {
+            setSubmissionStatus({ state: 'error', message: "Please select a final verdict before submitting." });
+            return;
+        }
+
+        try {
+            const { error: updateError } = await supabase
+                .from('candidate_profiles')
+                .update({ final_verdict: finalVerdict })
+                .eq('user_id', schedule.candidate.uid);
+
+            if (updateError) throw updateError;
+
+            const { error: scheduleUpdateError } = await supabase.from('schedules')
+                    .update({ status: 'Completed' })
+                    .eq('id', scheduleId);
+
+            if (scheduleUpdateError) {
+                 console.error("Failed to update schedule status to Completed:", scheduleUpdateError);
+                 setSubmissionStatus({ state: 'warning', message: "Final Verdict submitted. WARNING: Failed to update schedule status." });
+            }
+
+            setSubmissionStatus({ state: 'success', message: "Final Verdict recorded successfully! Redirecting to Home..." });
+
+            setTimeout(() => navigate('/'), 1500);
+
+        } catch (err) {
+            setSubmissionStatus({ state: 'error', message: "Final Verdict submission failed: " + err.message });
+        }
+    };
+
+
     if (loading || !schedule) return <div className={styles.authContainer}>Preparing Form...</div>;
 
     const activeModules = roundToModules[schedule.round_type] || [];
-
-    // ... (Rest of the component's render logic is unchanged)
 
     // --- RENDER LOGIC (No changes needed below this line) ---
 
