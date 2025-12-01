@@ -1,5 +1,5 @@
 # V-Recruitment Interview Evaluation App
-<img src="frontend/src/assets/App_logo.png" width="45%"/>
+<img src="frontend/src/assets/App_logo2.0.png" width="30%"/>
 
 ## Description
 
@@ -65,21 +65,19 @@ v-recruitment
 <p align="center">
   <img src="frontend/src/assets/login.PNG" width="45%"/>
   <img src="frontend/src/assets/home-page.PNG" width="45%"/>
-</p>
-
-<p align="center">
   <img src="frontend/src/assets/scheduler.PNG" width="45%"/>
+</p>
+
+<p align="center">
   <img src="frontend/src/assets/approval-page.PNG" width="45%"/>
-</p>
-
-<p align="center">
   <img src="frontend/src/assets/questions.PNG" width="45%"/>
-  <img src="frontend/src/assets/analytics.PNG" width="45%"/>
 </p>
 
 <p align="center">
+  <img src="frontend/src/assets/analytics.PNG" width="45%"/>
   <img src="frontend/src/assets/pdf-results.PNG" width="45%"/>
 </p>
+
 
 # Recruitment Evaluation System
 
@@ -397,3 +395,30 @@ npm run dev
   * Advanced analytics with trend visualization and predictive modeling.
   * Interview feedback sharing mechanism with candidates.
   * Integration with external HRMS platforms.
+
+## Collaborators
+
+<table>
+  <tr>
+    <td>
+      <b>Shrut Patil</b><br/>
+      Email: <a href="mailto:shrut.patil@vit.edu.in">shrut.email@example.com</a><br/>
+      LinkedIn: <a href="[https://linkedin.com/in/shrut](https://www.linkedin.com/in/shrutmpatil/)">linkedin.com/in/shrut</a>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <b>Rishikesh Patil</b><br/>
+      Email: <a href="mailto:rishikesh.patil@vit.edu.in">rishikesh.email@example.com</a><br/>
+      LinkedIn: <a href="[https://linkedin.com/in/rishikesh](https://www.linkedin.com/in/rishikesh-patil-486194312/)">linkedin.com/in/rishikesh</a>
+    </td>
+  </tr>
+    <tr>
+    <td>
+      <b>Shubhan Telang</b><br/>
+      Email: <a href="mailto:shubhan.telang@vit.edu.in">rishikesh.email@example.com</a><br/>
+      LinkedIn: <a href="[https://linkedin.com/in/rishikesh](https://www.linkedin.com/in/shubhan-telang-29b089308/)">linkedin.com/in/shubhan</a>
+    </td>
+  </tr>
+</table>
+
