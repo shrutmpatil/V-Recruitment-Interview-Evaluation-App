@@ -1,6 +1,9 @@
 # V-Recruitment Interview Evaluation App
 <img src="frontend/src/assets/App_logo2.0.png" width="30%"/>
 
+### Live Demo  
+**https://v-recruitment.netlify.app/**
+
 ## Description
 
 The V-Recruitment Interview Evaluation App project provides a foundation for building robust recruitment applications. Leveraging database technologies for efficient data storage, comprehensive testing to ensure reliability, and web technologies for accessibility, v-recruitment offers a versatile platform for managing the hiring process.
@@ -63,11 +66,14 @@ v-recruitment
 ```
 # UI/UX 
 <p align="center">
-  <img src="frontend/src/assets/login.PNG" width="30%"/>
-  <img src="frontend/src/assets/home-page.PNG" width="30%"/>
-  <img src="frontend/src/assets/approval-page.PNG" width="30%"/>
+  <img src="frontend/src/assets/login.PNG" width="45%"/>
+  <img src="frontend/src/assets/signUp.png" width="45%"/>
 </p>
 
+<p align="center">
+  <img src="frontend/src/assets/home-page.PNG" width="45%"/>
+  <img src="frontend/src/assets/approval-page.PNG" width="45%"/>
+</p>
 <p align="center">
   <img src="frontend/src/assets/scheduler.PNG" width="45%"/>
   <img src="frontend/src/assets/questions.PNG" width="45%"/>
@@ -421,4 +427,12 @@ npm run dev
     </td>
   </tr>
 </table>
+## Collaborators
+
+| Name | Email | LinkedIn |
+|------|--------|-----------|
+| **Shrut Patil** | shrut.patil@vit.edu.in | [LinkedIn Profile](https://linkedin.com/in/shrut](https://www.linkedin.com/in/shrutmpatil/)) |
+| **Rishikesh Patil** | rishikesh.patil@vit.edu.in | [LinkedIn Profile]([https://linkedin.com/in/your-link](https://www.linkedin.com/in/rishikesh-patil-486194312/)) |
+| **Shubhan Telang** | shubhan.telang@vit.edu.in | [LinkedIn Profile]([https://linkedin.com/in/rishikesh](https://www.linkedin.com/in/shubhan-telang-29b089308/)) |
+
 
