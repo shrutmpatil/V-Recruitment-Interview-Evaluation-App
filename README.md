@@ -1,4 +1,5 @@
 # V-Recruitment Interview Evaluation App
+![App Logo](frontend/src/assets/App_logo.png)
 
 ## Description
 
@@ -60,6 +61,15 @@ v-recruitment
     │   └── supabase.js
     └── vite.config.js
 ```
+# UI/UX 
+![Login Page](frontend/src/assets/login.PNG)
+![Home Page](frontend/src/assets/home-page.PNG)
+![Scheduler Page](frontend/src/assets/scheduler.PNG)
+![Approval Page](frontend/src/assets/approval-page.PNG)
+![Questions Page](frontend/src/assets/questions.PNG)
+![Analytics Page](frontend/src/assets/analytics.PNG)
+![PDF Results Page](frontend/src/assets/pdf-results.PNG)
+
 # Recruitment Evaluation System
 
 This document outlines the system architecture, technology stack, core features, and deployment procedures for the Recruitment Evaluation Platform.
@@ -124,6 +134,7 @@ The platform enforces hierarchical permissions via four distinct user roles:
 | **Faculty (Professor)** | Multi-round evaluation participation, past feedback review. |
 | **Student** | Classroom round evaluation only, past feedback review. |
 
+[Download the Full Recruitment Flowchart](frontend/src/assets/V-RECRUITMENT_FLOWCHART.pdf)
 -----
 
 ### Candidate Management
