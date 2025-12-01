@@ -65,11 +65,11 @@ v-recruitment
 <p align="center">
   <img src="frontend/src/assets/login.PNG" width="45%"/>
   <img src="frontend/src/assets/home-page.PNG" width="45%"/>
-  <img src="frontend/src/assets/scheduler.PNG" width="45%"/>
+  <img src="frontend/src/assets/approval-page.PNG" width="45%"/>
 </p>
 
 <p align="center">
-  <img src="frontend/src/assets/approval-page.PNG" width="45%"/>
+  <img src="frontend/src/assets/scheduler.PNG" width="45%"/>
   <img src="frontend/src/assets/questions.PNG" width="45%"/>
 </p>
 
