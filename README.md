@@ -432,7 +432,7 @@ npm run dev
 | Name | Email | LinkedIn |
 |------|--------|-----------|
 | **Shrut Patil** | shrut.patil@vit.edu.in | [LinkedIn Profile](https://linkedin.com/in/shrut](https://www.linkedin.com/in/shrutmpatil/)) |
-| **Rishikesh Patil** | rishikesh.patil@vit.edu.in | [LinkedIn Profile]([https://linkedin.com/in/your-link](https://www.linkedin.com/in/rishikesh-patil-486194312/)) |
-| **Shubhan Telang** | shubhan.telang@vit.edu.in | [LinkedIn Profile]([https://linkedin.com/in/rishikesh](https://www.linkedin.com/in/shubhan-telang-29b089308/)) |
+| **Rishikesh Patil** | rishikesh.patil@vit.edu.in | [LinkedIn Profile]([https://linkedin.com/in/your-link](https://www.linkedin.com/in/rishikesh-patil-486194312/) ) |
+| **Shubhan Telang** | shubhan.telang@vit.edu.in | [LinkedIn Profile]([https://linkedin.com/in/rishikesh](https://www.linkedin.com/in/shubhan-telang-29b089308/) ) |
 
 
