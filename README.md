@@ -63,9 +63,9 @@ v-recruitment
 ```
 # UI/UX 
 <p align="center">
-  <img src="frontend/src/assets/login.PNG" width="45%"/>
-  <img src="frontend/src/assets/home-page.PNG" width="45%"/>
-  <img src="frontend/src/assets/approval-page.PNG" width="45%"/>
+  <img src="frontend/src/assets/login.PNG" width="30%"/>
+  <img src="frontend/src/assets/home-page.PNG" width="30%"/>
+  <img src="frontend/src/assets/approval-page.PNG" width="30%"/>
 </p>
 
 <p align="center">
