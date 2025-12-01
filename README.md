@@ -1,5 +1,5 @@
 # V-Recruitment Interview Evaluation App
-![App Logo](frontend/src/assets/App_logo.png)
+<img src="frontend/src/assets/App_logo.png" width="45%"/>
 
 ## Description
 
@@ -62,13 +62,24 @@ v-recruitment
     └── vite.config.js
 ```
 # UI/UX 
-![Login Page](frontend/src/assets/login.PNG)
-![Home Page](frontend/src/assets/home-page.PNG)
-![Scheduler Page](frontend/src/assets/scheduler.PNG)
-![Approval Page](frontend/src/assets/approval-page.PNG)
-![Questions Page](frontend/src/assets/questions.PNG)
-![Analytics Page](frontend/src/assets/analytics.PNG)
-![PDF Results Page](frontend/src/assets/pdf-results.PNG)
+<p align="center">
+  <img src="frontend/src/assets/login.PNG" width="45%"/>
+  <img src="frontend/src/assets/home-page.PNG" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="frontend/src/assets/scheduler.PNG" width="45%"/>
+  <img src="frontend/src/assets/approval-page.PNG" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="frontend/src/assets/questions.PNG" width="45%"/>
+  <img src="frontend/src/assets/analytics.PNG" width="45%"/>
+</p>
+
+<p align="center">
+  <img src="frontend/src/assets/pdf-results.PNG" width="45%"/>
+</p>
 
 # Recruitment Evaluation System
 
