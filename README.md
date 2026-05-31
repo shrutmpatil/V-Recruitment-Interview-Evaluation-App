@@ -2,7 +2,7 @@
 <img src="frontend/src/assets/App_logo2.0.png" width="30%"/>
 
 ### Live Demo  
-**https://v-recruitment.netlify.app/**
+**https://vrecruitment.netlify.app/**
 
 ## Description
 
