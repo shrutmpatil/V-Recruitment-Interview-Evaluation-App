@@ -1,0 +1,382 @@
+/* Main App Layout */
+.app-container {
+  display: flex;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+}
+
+.sidebar-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  padding-left: 0.5rem;
+}
+
+.sidebar-nav {
+  margin-top: 2rem;
+  flex-grow: 1;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.nav-item:hover {
+  background-color: #f0f0f0;
+  transform: translateX(4px);
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, #ffeef2 0%, #ffd6e0 100%);
+  color: #ff3b5f;
+  box-shadow: 0 2px 8px rgba(255, 59, 95, 0.2);
+}
+
+.nav-item svg {
+  margin-right: 1rem;
+}
+
+.sidebar-footer {
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+
+.user-profile:hover {
+  background: #f9f9f9;
+}
+
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  object-fit: cover;
+  border: 2px solid #ffeef2;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.user-role {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: capitalize;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  background: none;
+  color: #555;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #fff0f0;
+  color: #ff3b5f;
+}
+
+.logout-button svg {
+  margin-right: 1rem;
+}
+
+/* Dashboard Main Content */
+.dashboard-main {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.dashboard-header p {
+  color: #666;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.dashboard-content {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+/* Stat Cards */
+.stat-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1) !important;
+}
+
+/* Action Cards */
+.actions-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.action-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.action-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+  border-color: #ff3b5f;
+}
+
+.action-card.primary {
+  background: linear-gradient(135deg, #ff3b5f 0%, #ff6b8a 100%);
+  color: #fff;
+}
+
+.action-card.primary .action-icon {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.action-card.primary p {
+  color: rgba(255,255,255,0.9);
+}
+
+.action-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  background: #f0f0f0;
+  color: #555;
+}
+
+.action-text {
+  flex-grow: 1;
+}
+
+.action-text h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+}
+
+.action-text p {
+  font-size: 0.9rem;
+  color: #888;
+  margin: 0;
+}
+
+.action-card span {
+  font-size: 1.5rem;
+  color: #000000;
+  transition: transform 0.3s;
+}
+
+.action-card:hover span {
+  transform: translateX(4px);
+}
+
+.action-card.primary span {
+  color: rgba(255,255,255,0.9);
+}
+
+/* Student View */
+.student-view {
+  grid-template-columns: 1fr;
+}
+
+.placeholder-card {
+  background: #fff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px dashed #e0e0e0;
+  transition: all 0.3s;
+}
+
+.placeholder-card:hover {
+  border-color: #ff3b5f;
+  background: #fafafa;
+}
+
+.placeholder-card h3 {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0 0 0.5rem 0;
+}
+
+.placeholder-card p {
+  color: #999;
+  margin: 0;
+}
+
+/* Image Selector for Profile */
+.imageSelector {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.imageSelector img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: all 0.3s;
+  object-fit: cover;
+}
+
+.imageSelector img:hover {
+  transform: scale(1.05);
+  border-color: #ff3b5f;
+}
+
+.imageSelector img.selectedImage {
+  border-color: #ff3b5f;
+  box-shadow: 0 4px 12px rgba(255, 59, 95, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    align-items: center;
+  }
+  
+  .sidebar-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .sidebar-footer .user-profile,
+  .sidebar-footer .logout-button span {
+    display: none;
+  }
+  
+  .sidebar-nav {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0;
+  }
+  
+  .nav-item {
+    padding: 0.5rem;
+  }
+  
+  .nav-item span {
+    display: none;
+  }
+  
+  .logout-button {
+    padding: 0.5rem;
+  }
+  
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation for loading states */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.dashboard-main > * {
+  animation: fadeIn 0.5s ease-out;
+}
